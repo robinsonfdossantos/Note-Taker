@@ -1,6 +1,1 @@
-[
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
-]
+[{"title":"Express.js","text":"Checking if it will save in db.json\n","id":"6194b939-8b51-4a31-b6eb-1018fe755099"},{"title":"Testing colors","text":"Testing colors in the prompt\n","id":"c432e559-0607-447a-aa43-fcbc9ecc5ea2"},{"title":"Colors 1","text":"Testing colors again","id":"cd8ae01f-49d6-4a65-a47f-3074e01423cd"},{"title":"Color","text":"one more color","id":"9621329d-3fad-42f6-9887-8584bc54bde7"}]
