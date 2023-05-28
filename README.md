@@ -30,19 +30,19 @@
 
   First, you will be presented with a welcome page that introduces you to what the following page is designed for.
 
-  <img src="./public/assets/images/welcome-page.png" alt="Welcome page" width="70%" height="70%" />
+  <img src="./public/assets/images/welcome-page.png" alt="Welcome page" width="80%" height="80%" />
 
   On the main page you will be presented with a list of notes you have created, where you can manage them by adding new notes, editing or removing them.
 
   The animation below shows how the page works.
   
-  <img src="./public/assets/images/note-animation.gif" alt="Main page functionality" width="70%" height="70%" />
+  <img src="./public/assets/images/note-animation.gif" alt="Main page functionality" width="80%" height="80%" />
 
   If you run the code locally, you can follow the app's backend request in your VS Code's terminal, while running the app.
 
   This image below illustrates the above animation responses in your local terminal.
 
-  <img src="./public/assets/images/terminal-responses.png" alt="VS Code terminal" width="30%" height="30%" />
+  <img src="./public/assets/images/terminal-responses.png" alt="VS Code terminal" width="50%" height="50%" />
  
   You can also visit my deployed Note Taker app at the link below.
 
