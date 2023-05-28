@@ -33,7 +33,7 @@ const green = '\x1b[32m%s\x1b[0m';
 // GET requests
 app.get('/notes', (req, res) => {
   res.sendFile(path.join(__dirname, './public/notes.html'));
-  console.info(yellow,`\n${req.method} request received`);
+  console.info(yellow, `\n${req.method} request received`);
 });
 
 app.get('/api/notes', (req, res) => {
@@ -48,17 +48,27 @@ app.get('*', (req, res) => {
 // Save to db.json
 // POST request
 app.post('/api/notes', (req, res) => {
-    const newNote = req.body;
-    newNote.id = uuid.v4();
-    notes.push(newNote);
-    res.json(newNote);
-  
-    fs.writeFileSync(dbArray, JSON.stringify(notes));
+  const newNote = req.body;
+  newNote.id = uuid.v4();
+  notes.push(newNote);
+  res.json(newNote);
 
-    console.info(blue, `\n${req.method} request received`);
-    console.log(green, `\n${newNote.title} added ✨`);
-  });
-  
+  fs.writeFileSync(dbArray, JSON.stringify(notes));
+
+  console.info(blue, `\n${req.method} request received`);
+  console.log(green, `\n${newNote.title} added ✨`);
+});
+
+/*
+// DELETE request to delete a note
+app.delete('/api/notes/:id', (req, res) => {
+  const noteId = req.params.id;
+  NewNotes = notes.filter((note) => note.id !== noteId);
+
+  fs.writeFileSync(dbArray, JSON.stringify(NewNotes));
+  notes = NewNotes;
+});
+*/
 
 app.listen(PORT, () => {
   console.log(`App listening at http://localhost:${PORT} 🚀`);
