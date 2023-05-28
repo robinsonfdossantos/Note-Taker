@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const uuid = require('uuid');
-const notes = require('./db/db.json');
+let notes = require('./db/db.json');
 
 const app = express();
 
@@ -28,6 +28,7 @@ try {
 const yellow = '\x1b[33m%s\x1b[0m';
 const blue = '\x1b[34m%s\x1b[0m';
 const green = '\x1b[32m%s\x1b[0m';
+const red = '\x1b[31m%s\x1b[0m';
 
 // Connect to html
 // GET requests
@@ -59,16 +60,19 @@ app.post('/api/notes', (req, res) => {
   console.log(green, `\n${newNote.title} added ✨`);
 });
 
-/*
+
 // DELETE request to delete a note
 app.delete('/api/notes/:id', (req, res) => {
   const noteId = req.params.id;
-  NewNotes = notes.filter((note) => note.id !== noteId);
+  const NewNotes = notes.filter((note) => note.id !== noteId);
 
   fs.writeFileSync(dbArray, JSON.stringify(NewNotes));
   notes = NewNotes;
+  res.sendStatus(204);
+
+  console.info(red, `\n${req.method} request received`);
 });
-*/
+
 
 app.listen(PORT, () => {
   console.log(`App listening at http://localhost:${PORT} 🚀`);
