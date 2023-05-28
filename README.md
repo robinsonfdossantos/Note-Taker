@@ -32,7 +32,7 @@
 
   <img src="./public/assets/images/welcome-page.png" alt="Welcome page" width="80%" height="80%" />
 
-  On the main page you will be presented with a list of notes you have created, where you can manage them by adding new notes, editing or removing them.
+  On the main page you will be presented with a list of notes you have created, where you can manage them by adding new notes or removing them.
 
   The animation below shows how the page works.
   
